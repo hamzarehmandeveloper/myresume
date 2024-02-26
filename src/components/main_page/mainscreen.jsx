@@ -15,7 +15,7 @@ const MainScreen = () => {
     <>
       <Container id="mainSection">
         <Row className="main-container">
-          <Col xs={12} md={6} className="left-column">
+          <Col sm={12} md={6} className="left-column">
             <div id="hero">
               <h1>
                 HELLO<span></span>
@@ -76,7 +76,7 @@ const MainScreen = () => {
               </Row>
             </Container>
           </Col>
-          <Col xs={12} md={6} className="right-column">
+          <Col sm={12} md={6} className="right-column">
             <img className="myImage" src={myImage} alt="My Image" />
           </Col>
         </Row>
