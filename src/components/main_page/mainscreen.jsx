@@ -7,6 +7,7 @@ import linkedin from "../../Assets/linkedIn.png";
 import github from "../../Assets/github.png";
 import { Row, Col, Container, Button } from "react-bootstrap";
 import About from "../about/about.jsx";
+import Skills from "../skills/skills.jsx";
 
 const MainScreen = () => {
   return (
@@ -66,7 +67,7 @@ const MainScreen = () => {
               </Row>
             </Container>
           </Col>
-          <Col md={6} className="right-column">
+          <Col xs={12} md={6} className="right-column">
             <img className="myImage" src={myImage} alt="My Image" />
           </Col>
         </Row>
@@ -74,6 +75,7 @@ const MainScreen = () => {
       <Col sm={12}>
         <About />
       </Col>
+      <Skills />
     </>
   );
 };

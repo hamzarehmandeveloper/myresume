@@ -17,8 +17,8 @@ function NavBar() {
             <Nav.Link className="links" href="#about">
               About
             </Nav.Link>
-            <Nav.Link className="links" href="#services">
-              Services
+            <Nav.Link className="links" href="#skills">
+              Skills
             </Nav.Link>
             <Nav.Link className="links" href="#portfolio">
               Portfolio
