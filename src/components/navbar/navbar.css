@@ -24,7 +24,7 @@
   }
   
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     .main_navbar_container {
       flex-direction: row;
       justify-content: center;
