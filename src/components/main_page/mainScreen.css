@@ -99,10 +99,7 @@
     -webkit-filter: grayscale(0);
   }
 
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
+
   @keyframes text_reveal_box {
     50% {
       width: 100%;

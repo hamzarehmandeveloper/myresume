@@ -1,6 +1,7 @@
 import { React } from "react";
 import "../main_page/mainScreen.css";
-import NavBar from "../navbar/navbar.jsx";
+import Footer from "../footer/footer.jsx";
+import ContactForm from "../contectform/form.jsx";
 import myImage from "../../Assets/myimage.png";
 import CVpdf from "../../Assets/HamzaCV.pdf";
 import linkedin from "../../Assets/linkedIn.png";
@@ -84,6 +85,8 @@ const MainScreen = () => {
         <About />
       </Col>
       <Skills />
+      <ContactForm />
+      <Footer />
     </>
   );
 };
