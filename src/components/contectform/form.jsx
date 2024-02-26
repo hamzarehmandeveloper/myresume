@@ -1,5 +1,5 @@
-import { React, useState } from "react";
-import { Container, Form, Button, Row, Col } from "react-bootstrap";
+import { React, useState, useEffect } from "react";
+import { Container, Form, Button, Row, Col, Alert } from "react-bootstrap";
 import "../contectform/form.css";
 import Contactme from "../../Assets/contactme.png";
 
@@ -10,43 +10,62 @@ const ContactForm = () => {
     Message: "",
   });
 
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
     console.log(formData);
   };
 
-  //   const handleSubmit = (event) => {
-  //     event.preventDefault();
-  //     console.log(formData);
-  //   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxySKQi5V-sPz1B2mINBXgHci5unl1NuE2e60eF9zxoWNivysqOtDeL6CyOW22ZfL-WrA/exec",
+        "https://v1.nocodeapi.com/hamzarehman/google_sheets/aNWruFHTGAWJybcg?tabId=Sheet1",
         {
           method: "POST",
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/json",
           },
-          body: formData,
+          body: JSON.stringify([
+            [
+              formData.Name,
+              formData.Email,
+              formData.Message,
+              new Date().toLocaleString(),
+            ],
+          ]),
         }
       );
 
       if (response.ok) {
-        // Handle success
         console.log("Form submitted successfully!");
+        setFormData({
+          Name: "",
+          Email: "",
+          Message: "",
+        });
+        setSubmissionStatus("success");
       } else {
-        // Handle error
         console.error("Error submitting form:", response.statusText);
+        setSubmissionStatus("error");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
+      setSubmissionStatus("error");
     }
   };
+
+  useEffect(() => {
+    if (submissionStatus === "success") {
+      const timer = setTimeout(() => {
+        setSubmissionStatus(null);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [submissionStatus]);
 
   return (
     <Container className="contact-form-container" id="contect">
@@ -110,6 +129,16 @@ const ContactForm = () => {
               >
                 Submit
               </Button>
+              {submissionStatus === "success" && (
+                <Alert variant="success" className="mt-3">
+                  Form submitted successfully!
+                </Alert>
+              )}
+              {submissionStatus === "error" && (
+                <Alert variant="danger" className="mt-3">
+                  Error submitting form. Please try again later.
+                </Alert>
+              )}
             </Col>
           </Form>
         </Col>
