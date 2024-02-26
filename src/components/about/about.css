@@ -8,7 +8,7 @@
 #about{
     font-size: 45px;
     text-decoration: underline;
-    text-decoration-color: red;
+    text-decoration-color: crimson;
 }
 #paragraph{
     text-align:left;
@@ -21,7 +21,7 @@
     align-items: center;
 }
 span {
-    color: red;
+    color: crimson;
 }
 
 

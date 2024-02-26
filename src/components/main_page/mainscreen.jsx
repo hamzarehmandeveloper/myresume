@@ -15,10 +15,18 @@ const MainScreen = () => {
       <Container id="mainSection">
         <Row className="main-container">
           <Col xs={12} md={6} className="left-column">
-            <p style={{ padding: 0, marginBottom: 0 }}>Hello, I'm</p>
-            <h1 style={{ padding: 0, marginBottom: 0 }} id="name">
-              HAMZA REHMAN
-            </h1>
+            <div id="hero">
+              <h1>
+                HELLO<span></span>
+              </h1>
+              <h1>
+                MY NAME IS <span></span>
+              </h1>
+              <h1 id="name">
+                HAMZA REHMAN <span></span>
+              </h1>
+            </div>
+
             <p style={{ padding: 0 }}>SOFTWARE ENGINEER</p>
             <Container style={{ padding: 0 }}>
               <Row>
