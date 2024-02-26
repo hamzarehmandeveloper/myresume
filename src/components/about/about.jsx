@@ -28,6 +28,11 @@ export default function about() {
               my skills in mobile and web development can contribute to
               impactful projects.
             </p>
+            <br />
+            <blockquote style={{ textAlign: "left" }}>
+              <p>"Strive to build things that make a difference!"</p>
+              <footer>- Hamza Rehman</footer>
+            </blockquote>
           </Col>
           <Col sm={12} lg={6}>
             <Container className="skills-pic" style={{ padding: 0 }}>

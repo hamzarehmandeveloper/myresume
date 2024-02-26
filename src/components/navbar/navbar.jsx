@@ -6,7 +6,7 @@ import "./navbar.css";
 
 function NavBar() {
   return (
-    <Navbar expand="sm" className="nav">
+    <Navbar expand="md" className="nav">
       <Container fluid className="main_navbar_container">
         <Navbar.Toggle aria-controls="navbarScroll" className="toggle-button" />
         <Navbar.Collapse id="navbarScroll">
@@ -20,10 +20,7 @@ function NavBar() {
             <Nav.Link className="links" href="#skills">
               Skills
             </Nav.Link>
-            <Nav.Link className="links" href="#portfolio">
-              Portfolio
-            </Nav.Link>
-            <Nav.Link className="links" href="#contact">
+            <Nav.Link className="links" href="#contect">
               Contact
             </Nav.Link>
           </Nav>
