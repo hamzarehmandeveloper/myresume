@@ -12,7 +12,6 @@ const MainScreen = () => {
   return (
     <>
       <Container id="mainSection">
-        <NavBar />
         <Row className="main-container">
           <Col xs={12} md={6} className="left-column">
             <p style={{ padding: 0, marginBottom: 0 }}>Hello, I'm</p>

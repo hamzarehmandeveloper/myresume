@@ -1,14 +1,16 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
 import "./navbar.css";
 
-const NavBar = () => {
+function NavBar() {
   return (
-    <Navbar className="nav" expand="lg" style={{ paddingTop: 20 }}>
-      <Container className="main_navbar_container">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="nav_header me-auto d-flex justify-content-center align-items-center">
+    <Navbar expand="sm" className="nav">
+      <Container fluid className="main_navbar_container">
+        <Navbar.Toggle aria-controls="navbarScroll" className="toggle-button" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav className="nav_header me-auto my-lg-0">
             <Nav.Link className="links" href="#home">
               Home
             </Nav.Link>
@@ -29,6 +31,6 @@ const NavBar = () => {
       </Container>
     </Navbar>
   );
-};
+}
 
 export default NavBar;

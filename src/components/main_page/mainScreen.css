@@ -3,17 +3,18 @@
     height: 100vh;
      
 }
+  .right-column{
+    display: flex;
+    justify-content: center;
+  }
   .left-column{
     justify-content: center;
     display: flex;
     flex-direction: column;
   }
-  #name{
-    margin: 0px;
-    font-size: 4vw;
+  #name{  
+    font-size: 4rem;
     font-weight: bold;
-    overflow: hidden;
-    white-space: nowrap;
     width: 0;
     animation: typing;
     animation-duration: 1.5s;
@@ -22,7 +23,6 @@
   }
   p{
     font-size: 1.2rem;
-    margin-left: 7px;
     margin-top: 10px;
   }
 
@@ -68,8 +68,4 @@
   @keyframes typing {
     from { width: 0 }
     to { width: 100% }
-  }
-
-  @media screen {
-    
   }
