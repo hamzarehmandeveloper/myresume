@@ -20,6 +20,7 @@ const Footer = () => {
             <img className="logo" src={github} alt="linkedIn" />
           </a>
         </Col>
+        
       </Row>
     </footer>
   );

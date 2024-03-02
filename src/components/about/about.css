@@ -1,35 +1,27 @@
-.aboutcontainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-#about{
-    font-size: 45px;
-    text-decoration: underline;
-    text-decoration-color: crimson;
-}
-#paragraph{
-    text-align:left;
-    padding: 30px 0px;
-    font-size: 25px;
-}
-.para-con{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-span {
+/* about.css */
+.aboutcontainer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #about{
+    text-align: center;
+    text-decoration: underline   crimson;
+  }
+
+  span{
     color: crimson;
-}
-
-
-
-.skills-pic{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit:fill;
-}
+  }
+  .main-heading {
+    padding: 0;
+    margin-top: 50px;
+  }
+  
+  .about-paragraph {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  
+  .blockquote {
+    text-align: left;
+  }
+  
